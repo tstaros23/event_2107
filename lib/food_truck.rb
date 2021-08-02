@@ -16,4 +16,17 @@ class FoodTruck
   def stock(item, quantity)
     @inventory[item] += quantity
   end
+
+  def potential_revenue
+    total = 0
+    @inventory.each do |item|
+      item.each do |item_info|
+        item_info.price.gsub(/[^\d\.]/, '').to_f * @inventory.count
+    require "pry"; binding.pry
+      end
+    end
+    total
+    require "pry"; binding.pry
+    4
+  end
 end
